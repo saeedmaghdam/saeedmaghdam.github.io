@@ -14,6 +14,7 @@ Here is a channel to share my experiences in different aspects of life, like lif
 
 The topics I would like to cover:
 - C#
+- Java Script
 - Kubernetes
 - Mathematics
 - Life Experiences
