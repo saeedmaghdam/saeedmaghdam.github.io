@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Saeed Aghdam</title>
+    <link>https://aghdam.nl/post/</link>
+    <description>Recent content in Posts on Saeed Aghdam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 25 Feb 2023 23:49:04 +0100</lastBuildDate><atom:link href="https://aghdam.nl/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://aghdam.nl/post/my-first-post/</link>
+      <pubDate>Sat, 25 Feb 2023 23:49:04 +0100</pubDate>
+      
+      <guid>https://aghdam.nl/post/my-first-post/</guid>
+      
+        <description>This is my first post! Here is a channel to share my experiences in different aspects of life, like life experiences and professional experiences.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
