@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>index on Saeed Aghdam</title>
+    <link>https://aghdam.nl/tags/index/</link>
+    <description>Recent content in index on Saeed Aghdam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="https://aghdam.nl/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Posts</title>
+      <link>https://aghdam.nl/post/</link>
+      <pubDate>Fri, 31 Mar 2023 16:46:16 +0200</pubDate>
+      
+      <guid>https://aghdam.nl/post/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

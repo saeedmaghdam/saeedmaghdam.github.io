@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        Class Diagram Relations |
+      Saeed Aghdam
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.110.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Saeed Aghdam" />
+  <meta
+    name="description"
+    content="Call me Saeed"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.5794be192d21535bdd301561e043a96b6adbad2b5c08279deff459e4661c613f.css"
+      integrity="sha256-V5S&#43;GS0hU1vdMBVh4EOpa2rbrStcCCed7/RZ5GYcYT8="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7f3c2281c7f965ce3c64888aa452793252a0416909c181097f81d0a0f7d1624e.css"
+    integrity="sha256-fzwigcf5Zc48ZIiKpFJ5MlKgQWkJwYEJf4HQoPfRYk4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.35fc032da8ede6681675d20a2f862fb9e1045c1d512d495fcf862c054daffef2.css"
+    integrity="sha256-NfwDLajt5mgWddIKL4YvueEEXB1RLUlfz4YsBU2v/vI="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.3b92357925ea7284f0c6b0378396f39f470f7842ed9702f337e667c4026bf837.css"
+    integrity="sha256-O5I1eSXqcoTwxrA3g5bzn0cPeELtlwLzN&#43;ZnxAJr&#43;Dc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.ebb1096e1976e8cc4e2532cfa050b8f30eb13b8eb06be5cee3e38eb426b838ea.css"
+    integrity="sha256-67EJbhl26MxOJTLPoFC48w6xO46wa&#43;XO4&#43;OOtCa4OOo="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://aghdam.nl/post/class-diagram-relations/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://aghdam.nl/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Class Diagram Relations"/>
+<meta name="twitter:description" content="Class diagram relations A brief introductions to different relationships between classes in Class Diagram."/>
+
+
+
+  
+  <meta property="og:title" content="Class Diagram Relations" />
+<meta property="og:description" content="Class diagram relations A brief introductions to different relationships between classes in Class Diagram." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aghdam.nl/post/class-diagram-relations/" /><meta property="og:image" content="https://aghdam.nl/images/site-feature-image.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-03-31T16:46:16+02:00" />
+<meta property="article:modified_time" content="2023-03-31T16:46:16+02:00" /><meta property="og:site_name" content="Saeed Aghdam" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Class Diagram Relations",
+        "headline": "Class Diagram Relations",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Class diagram relations A brief introductions to different relationships between classes in Class Diagram.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-US",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/aghdam.nl\/post\/class-diagram-relations\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-03-31T16:46:16.00Z",
+        "datePublished": "2023-03-31T16:46:16.00Z",
+        "dateModified": "2023-03-31T16:46:16.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Saeed Aghdam",
+            "url": "https://aghdam.nl",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/aghdam.nl\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://aghdam.nl/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/aghdam.nl\/post\/class-diagram-relations\/",
+        "wordCount" : "479",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Saeed Aghdam</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Call me Saeed</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/saeedmaghdam/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/saeedmaghdam"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:saeed@aghdam.nl"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Saeed Aghdam
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/blog/class-diagram-relations/class-diagram-relations-thumbnail.JPG" alt="Thumbnail image" />
+      </div>
+    
+    <div class="post__content">
+      <h1>Class Diagram Relations</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  31/3/2023
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">3-minute read</span>
+          </li>
+        </ul>
+      <h3 id="class-diagram-relations">Class diagram relations</h3>
+<p>A brief introductions to different relationships between classes in Class Diagram.</p>
+<h4 id="has">Has</h4>
+<p>The &ldquo;has&rdquo; keyword is used to represent an ownership or containment relationship between two classes. For example, if a &ldquo;Person&rdquo; class has one or more &ldquo;Address&rdquo; objects associated with it, you can represent this relationship as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Person --&gt; Address: has &gt;
+</span></span></code></pre></div><p><img src="/images/blog/class-diagram-relations/has.png" alt="has"></p>
+<h4 id="uses">Uses</h4>
+<p>The &ldquo;uses&rdquo; keyword is used to represent a dependency relationship between two classes. For example, if a &ldquo;Car&rdquo; class uses a &ldquo;Engine&rdquo; object, you can represent this relationship as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Car --&gt; Engine: uses &gt;
+</span></span></code></pre></div><p><img src="/images/blog/class-diagram-relations/uses.png" alt="Uses"></p>
+<h4 id="takes">Takes</h4>
+<p>The &ldquo;takes&rdquo; keyword is used to represent a one-to-one relationship between two classes, where one class takes another as input or parameter. For example, if a &ldquo;Calculator&rdquo; class takes two &ldquo;Number&rdquo; objects and performs a calculation on them, you can represent this relationship as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Calculator --&gt; Number: takes &gt;
+</span></span></code></pre></div><p><img src="/images/blog/class-diagram-relations/takes.png" alt="Takes"></p>
+<h4 id="places">Places</h4>
+<p>The &ldquo;places&rdquo; keyword is used to represent a one-to-many relationship between two classes, where one class places or creates many instances of another class. For example, if a &ldquo;Customer&rdquo; class places many &ldquo;Order&rdquo; objects, you can represent this relationship as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Customer -- Order: places &gt;
+</span></span></code></pre></div><p><img src="/images/blog/class-diagram-relations/places.png" alt="Places"></p>
+<h4 id="extends">Extends</h4>
+<p>The &ldquo;extends&rdquo; keyword is used to represent an inheritance relationship between two classes, where one class is a subclass of another class. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">class Animal {
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Cat extends Animal {
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p><img src="/images/blog/class-diagram-relations/extends.png" alt="Extends"></p>
+<h4 id="implements">Implements</h4>
+<p>The &ldquo;implements&rdquo; keyword is used to represent an interface implementation relationship between two classes, where one class implements the methods defined in an interface. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">interface Drawable {
+</span></span><span class="line"><span class="cl">  void draw();
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Circle implements Drawable {
+</span></span><span class="line"><span class="cl">  void draw() {
+</span></span><span class="line"><span class="cl">    // draw circle
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p><img src="/images/blog/class-diagram-relations/implements.png" alt="Implements"></p>
+<h4 id="associates">Associates</h4>
+<p>The &ldquo;associates&rdquo; keyword is used to represent a bidirectional association between two classes, where each class has a reference to the other class. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">class Person {
+</span></span><span class="line"><span class="cl">  private List&lt;Address&gt; addresses;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Address {
+</span></span><span class="line"><span class="cl">  private Person owner;
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Person &lt;-&gt; Address: associates
+</span></span></code></pre></div><p><img src="/images/blog/class-diagram-relations/associates.png" alt="Associates"></p>
+<h4 id="aggregates">Aggregates</h4>
+<p>The &ldquo;aggregates&rdquo; keyword is used to represent a unidirectional association between two classes, where one class contains a collection of instances of the other class. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">class Library {
+</span></span><span class="line"><span class="cl">  private List&lt;Book&gt; books;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Book {
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Library --&gt; Book: aggregates
+</span></span></code></pre></div><p><img src="/images/blog/class-diagram-relations/aggregates.png" alt="Aggregates"></p>
+<h4 id="composes">Composes</h4>
+<p>The &ldquo;composes&rdquo; keyword is used to represent a composition relationship between two classes, where one class is composed of instances of the other class. This is similar to aggregation, but in composition, the lifetime of the composed objects is tied to the lifetime of the composite object. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">class Car {
+</span></span><span class="line"><span class="cl">  private Engine engine;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Engine {
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Car --&gt; Engine: composes
+</span></span></code></pre></div><p><img src="/images/blog/class-diagram-relations/composes.png" alt="Composes"></p>
+<h4 id="usescomposesaggregates">Uses/Composes/Aggregates:</h4>
+<p>The &ldquo;uses/composes/aggregates&rdquo; keyword is used to represent a combination of relationships between two classes. This can be useful when the relationship between the classes is not clearly one type or another. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">class Zoo {
+</span></span><span class="line"><span class="cl">  private List&lt;Animal&gt; animals;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Animal {
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Zoo --&gt; Animal: uses/composes/aggregates
+</span></span></code></pre></div><p><img src="/images/blog/class-diagram-relations/uses-composes-aggregates.png" alt="Uses/Composes/Aggregates"></p>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Saeed Aghdam
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
+</html>
