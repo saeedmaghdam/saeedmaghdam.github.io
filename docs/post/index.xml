@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Saeed Aghdam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 31 Mar 2023 16:46:16 +0200</lastBuildDate><atom:link href="https://aghdam.nl/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Apr 2023 16:46:51 +0200</lastBuildDate><atom:link href="https://aghdam.nl/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Passing Metadata Fields to Arguments in Kubernetes Yaml Files</title>
+      <link>https://aghdam.nl/post/passing-metadata-fields-to-arguments-in-kubernetes-yaml-files/</link>
+      <pubDate>Tue, 18 Apr 2023 16:46:51 +0200</pubDate>
+      
+      <guid>https://aghdam.nl/post/passing-metadata-fields-to-arguments-in-kubernetes-yaml-files/</guid>
+      
+        <description>Passing metadata fields like metadata.name or metadata.namespace to the arguments field in Kubernetes YAML files is a powerful way to dynamically configure your containers and pods.</description>
+      
+    </item>
+    
     <item>
       <title>Class Diagram Relations</title>
       <link>https://aghdam.nl/post/class-diagram-relations/</link>
