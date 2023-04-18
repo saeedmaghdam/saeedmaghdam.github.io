@@ -38,3 +38,32 @@ The `env` field in the container configuration specifies that the value of the `
 Note that the `metadata.name` field is only available when the pod is running. If you need to set the value of the `MY_POD_NAME` environment variable before the pod starts up, you will need to use a different approach, such as using a Kubernetes init container to set the value of the environment variable.
 
 Using the `fieldRef` syntax to pass metadata fields to the `arguments` field can be a powerful way to dynamically configure your containers and pods. With this approach, you can easily pass information about the pod or the environment to your application code, without having to hardcode the values in your YAML files.
+
+Below, you can find another example:
+
+```yaml
+apiVersion: k6.io/v1alpha1
+kind: K6
+metadata:
+  name: k6-ot-load-tests
+  namespace: ot-load-tests
+spec:
+  parallelism: 3
+  script:
+    configMap:
+      name: "ot-load-test-scripts"
+      file: "scenario_get-watchlist.js"
+  arguments:
+    - -e
+    - ENVIRONMENT=DEV
+    - -e
+    - PARALLELISM=3
+    - -e
+    - POD_NAME=$(POD_NAME)
+  runner:
+    env:
+      - name: POD_NAME
+        valueFrom:
+          fieldRef:
+            fieldPath: metadata.name
+```
