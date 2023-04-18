@@ -197,7 +197,7 @@
 
     ,
         "url" : "https:\/\/aghdam.nl\/post\/passing-metadata-fields-to-arguments-in-kubernetes-yaml-files\/",
-        "wordCount" : "310",
+        "wordCount" : "356",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -436,7 +436,32 @@
 <p>The <code>env</code> field in the container configuration specifies that the value of the <code>MY_POD_NAME</code> environment variable should be set using the <code>fieldRef</code> syntax. The <code>fieldPath</code> attribute specifies that the value of the environment variable should be set to the value of the <code>metadata.name</code> field.</p>
 <p>Note that the <code>metadata.name</code> field is only available when the pod is running. If you need to set the value of the <code>MY_POD_NAME</code> environment variable before the pod starts up, you will need to use a different approach, such as using a Kubernetes init container to set the value of the environment variable.</p>
 <p>Using the <code>fieldRef</code> syntax to pass metadata fields to the <code>arguments</code> field can be a powerful way to dynamically configure your containers and pods. With this approach, you can easily pass information about the pod or the environment to your application code, without having to hardcode the values in your YAML files.</p>
-</div>
+<p>Below, you can find another example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">k6.io/v1alpha1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">K6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">k6-ot-load-tests</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">ot-load-tests</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">parallelism</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">configMap</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;ot-load-test-scripts&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;scenario_get-watchlist.js&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">arguments</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- -<span class="l">e</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">ENVIRONMENT=DEV</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- -<span class="l">e</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">PARALLELISM=3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- -<span class="l">e</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">POD_NAME=$(POD_NAME)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">runner</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">POD_NAME</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">fieldRef</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l">metadata.name</span><span class="w">
+</span></span></span></code></pre></div></div>
     <div class="post__footer">
       
 
