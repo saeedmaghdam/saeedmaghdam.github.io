@@ -3,12 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aghdam.nl/</loc>
-    <lastmod>2023-06-14T05:03:31+02:00</lastmod>
+    <lastmod>2023-06-16T14:20:17+02:00</lastmod>
   </url><url>
-    <loc>https://aghdam.nl/post/alternatives-to-ngrok/</loc>
-    <lastmod>2023-06-14T05:03:31+02:00</lastmod>
+    <loc>https://aghdam.nl/post/openssl-generate-certificate/</loc>
+    <lastmod>2023-06-16T14:20:17+02:00</lastmod>
   </url><url>
     <loc>https://aghdam.nl/post/</loc>
+    <lastmod>2023-06-16T14:20:17+02:00</lastmod>
+  </url><url>
+    <loc>https://aghdam.nl/post/alternatives-to-ngrok/</loc>
     <lastmod>2023-06-14T05:03:31+02:00</lastmod>
   </url><url>
     <loc>https://aghdam.nl/post/passing-metadata-fields-to-arguments-in-kubernetes-yaml-files/</loc>
