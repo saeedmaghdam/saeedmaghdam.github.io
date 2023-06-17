@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        Manually Configuring Https for Local Development |
+      Saeed Aghdam
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.110.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Saeed Aghdam" />
+  <meta
+    name="description"
+    content="Call me Saeed"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.5794be192d21535bdd301561e043a96b6adbad2b5c08279deff459e4661c613f.css"
+      integrity="sha256-V5S&#43;GS0hU1vdMBVh4EOpa2rbrStcCCed7/RZ5GYcYT8="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7f3c2281c7f965ce3c64888aa452793252a0416909c181097f81d0a0f7d1624e.css"
+    integrity="sha256-fzwigcf5Zc48ZIiKpFJ5MlKgQWkJwYEJf4HQoPfRYk4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.35fc032da8ede6681675d20a2f862fb9e1045c1d512d495fcf862c054daffef2.css"
+    integrity="sha256-NfwDLajt5mgWddIKL4YvueEEXB1RLUlfz4YsBU2v/vI="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.3b92357925ea7284f0c6b0378396f39f470f7842ed9702f337e667c4026bf837.css"
+    integrity="sha256-O5I1eSXqcoTwxrA3g5bzn0cPeELtlwLzN&#43;ZnxAJr&#43;Dc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.ebb1096e1976e8cc4e2532cfa050b8f30eb13b8eb06be5cee3e38eb426b838ea.css"
+    integrity="sha256-67EJbhl26MxOJTLPoFC48w6xO46wa&#43;XO4&#43;OOtCa4OOo="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://aghdam.nl/post/manually-configuring-https-for-local-development/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://aghdam.nl/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Manually Configuring Https for Local Development"/>
+<meta name="twitter:description" content="Configuring SSL for Local Development with .NET 6 and HttpListener When developing web applications on your local machine, it&rsquo;s essential to simulate as closely as possible the conditions of your live environment."/>
+
+
+
+  
+  <meta property="og:title" content="Manually Configuring Https for Local Development" />
+<meta property="og:description" content="Configuring SSL for Local Development with .NET 6 and HttpListener When developing web applications on your local machine, it&rsquo;s essential to simulate as closely as possible the conditions of your live environment." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aghdam.nl/post/manually-configuring-https-for-local-development/" /><meta property="og:image" content="https://aghdam.nl/images/site-feature-image.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-06-17T19:09:14+02:00" />
+<meta property="article:modified_time" content="2023-06-17T19:09:14+02:00" /><meta property="og:site_name" content="Saeed Aghdam" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Manually Configuring Https for Local Development",
+        "headline": "Manually Configuring Https for Local Development",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Configuring SSL for Local Development with .NET 6 and HttpListener When developing web applications on your local machine, it\u0026rsquo;s essential to simulate as closely as possible the conditions of your live environment.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-US",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/aghdam.nl\/post\/manually-configuring-https-for-local-development\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-06-17T19:09:14.00Z",
+        "datePublished": "2023-06-17T19:09:14.00Z",
+        "dateModified": "2023-06-17T19:09:14.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Saeed Aghdam",
+            "url": "https://aghdam.nl",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/aghdam.nl\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://aghdam.nl/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/aghdam.nl\/post\/manually-configuring-https-for-local-development\/",
+        "wordCount" : "749",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Saeed Aghdam</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Call me Saeed</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/saeedmaghdam/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/saeedmaghdam"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:saeed@aghdam.nl"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Saeed Aghdam
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Manually Configuring Https for Local Development</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  17/6/2023
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">4-minute read</span>
+          </li>
+        </ul>
+      <h2 id="configuring-ssl-for-local-development-with-net-6-and-httplistener">Configuring SSL for Local Development with .NET 6 and HttpListener</h2>
+<p>When developing web applications on your local machine, it&rsquo;s essential to simulate as closely as possible the conditions of your live environment. One key part of this is implementing SSL. In this article, we&rsquo;ll guide you through the process of importing a .pfx certificate into the Microsoft Management Console (MMC), binding it to a specific port using <code>netsh</code>, and then validating the binding.</p>
+<h3 id="importing-a-pfx-certificate-in-mmc">Importing a .pfx Certificate in MMC</h3>
+<p>A .pfx file is a PKCS#12 archive: a bag that can contain a lot of cryptographic stuff like private keys, certificates, miscellaneous secrets, etc. When you want to use an SSL certificate with your .NET application, you need to import this .pfx file into your local machine. The following steps will guide you on how to import a .pfx certificate using MMC:</p>
+<ol>
+<li>Open the Microsoft Management Console (MMC) by clicking the start menu, typing mmc into the search bar, and pressing Enter.</li>
+<li>In the MMC, go to File &gt; Add/Remove Snap-in.</li>
+<li>In the Add or Remove Snap-ins dialog, select Certificates and then click Add.</li>
+<li>In the Certificates snap-in dialog, select Computer account and then click Next.</li>
+<li>Select Local computer and then click Finish.</li>
+<li>Click OK in the Add or Remove Snap-ins dialog.</li>
+<li>In the MMC, navigate to Certificates (Local Computer) &gt; Personal.</li>
+<li>Right-click on the Personal folder, go to All Tasks &gt; Import.</li>
+<li>In the Certificate Import Wizard, click Next.</li>
+<li>Click Browse and select your .pfx certificate file, then click Next.</li>
+<li>Enter the password for the .pfx file, select Mark this key as exportable, and then click Next.</li>
+<li>Ensure that Place all certificates in the following store is selected and that the Certificate store is set to Personal. Click Next.</li>
+<li>Click Finish to complete the import. You should see a success message.</li>
+</ol>
+<p>Now that you&rsquo;ve imported your .pfx certificate, it&rsquo;s time to bind this certificate to your port.</p>
+<h3 id="binding-the-certificate-to-a-port-using-netsh">Binding the Certificate to a Port using Netsh</h3>
+<p>To bind the certificate to a port, you&rsquo;ll use the netsh command. This command allows you to display or modify the network configuration of a computer that is currently running. Here&rsquo;s how to bind your certificate to a port:</p>
+<ol>
+<li>Open the Command Prompt as an administrator.</li>
+<li>Enter the following commands:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">netsh
+</span></span><span class="line"><span class="cl">http
+</span></span><span class="line"><span class="cl">add sslcert <span class="nv">ipport</span><span class="o">=</span>0.0.0.0:8000 <span class="nv">appid</span><span class="o">={</span>842627ec-5214-4d05-ad9c-024c9e166bde<span class="o">}</span> <span class="nv">certhash</span><span class="o">=</span>054ca22b099b29a22020ef1567910d0edaf9272a
+</span></span></code></pre></div><p>The ipport parameter is where you specify the IP address and the port you want to bind the SSL certificate to. In this case, we&rsquo;re binding to any IP address (<code>0.0.0.0</code>) on port <code>8000</code>.</p>
+<p>The <code>appid</code> parameter is a unique identifier for your application, which can be any GUID you choose.</p>
+<p>The <code>certhash</code> parameter is the thumbprint of the certificate. This thumbprint is a hexadecimal string that uniquely identifies the certificate.</p>
+<h3 id="validating-the-ssl-certificate-binding">Validating the SSL Certificate Binding</h3>
+<p>After binding the certificate, you should validate that the operation was successful. This can be achieved by using the following <code>netsh</code> command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">netsh http show sslcert <span class="nv">ipport</span><span class="o">=</span>0.0.0.0:8000
+</span></span></code></pre></div><p>This command should display information about the certificate that is bound to the# Configuring SSL for Local Development with .NET 6 and HttpListener</p>
+<p>When developing web applications on your local machine, it&rsquo;s essential to simulate as closely as possible the conditions of your live environment. One key part of this is implementing SSL. In this article, we&rsquo;ll guide you through the process of importing a .pfx certificate into the Microsoft Management Console (MMC), binding it to a specific port using <code>netsh</code>, and then validating the binding.</p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>In the process of executing the above steps, you may encounter some errors. Here are a few potential issues and their solutions:</p>
+<ul>
+<li><strong>The parameter is incorrect:</strong> This could be due to the order of parameters in the netsh command. Ensure that appid comes before certhash in the command. It could also be due to hidden characters in the certhash or appid, or if these values are enclosed in single quotes.</li>
+<li><strong>SSL Certificate add failed, Error 1312:</strong> This error usually means that the private key was not imported correctly. Make sure you marked the certificate as exportable when importing it. Also, ensure the certificate is in the right store - it should be under Certificates (Local Computer) &gt; Personal in MMC.</li>
+</ul>
+<p>In conclusion, setting up SSL for local development is crucial for testing your applications in a production-like environment. It may seem a bit complex at first, but once you get the hang of it, it becomes a routine part of the setup process. Always remember to validate your setup and troubleshoot any issues that arise. Happy coding!</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Saeed Aghdam
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
+</html>
