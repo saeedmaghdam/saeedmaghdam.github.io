@@ -1,3 +1,4 @@
+
 ---
 title: "Class Diagram Relations"
 date: 2023-03-31T16:46:16+02:00
