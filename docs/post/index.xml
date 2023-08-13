@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Saeed Aghdam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 25 Jul 2023 19:17:11 +0200</lastBuildDate><atom:link href="https://aghdam.nl/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Aug 2023 00:03:12 +0200</lastBuildDate><atom:link href="https://aghdam.nl/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sample Nginx With Self Signed Https Protocol</title>
+      <link>https://aghdam.nl/post/sample-nginx-with-self-signed-https-protocol/</link>
+      <pubDate>Mon, 14 Aug 2023 00:03:12 +0200</pubDate>
+      
+      <guid>https://aghdam.nl/post/sample-nginx-with-self-signed-https-protocol/</guid>
+      
+        <description>Sample nginx with a self-signed certificate Steps on how to generate a self-signed SSL certificate using OpenSSL, install it in a Docker container, and access it using HTTPS protocol and port 5001 in your Windows machine:</description>
+      
+    </item>
+    
     <item>
       <title>Improve Creativity</title>
       <link>https://aghdam.nl/post/improve-creativity/</link>
