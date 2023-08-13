@@ -7,6 +7,13 @@ Categories: []
 DisableComments: false
 ---
 
+## Generate certificates
+1. Using process described at [Sample nginx with a self-signed certificate](https://aghdam.nl/post/sample-nginx-with-self-signed-https-protocol/)
+2. Using following command (**recommended**):
+```sh
+dotnet dev-certs https -ep server.pfx -p PASSWORD
+```
+
 ## Load certificates in asp.net core application
 
 To convert your server's certificate and private key files (server.crt and server.key) into a PFX (Personal Information Exchange) format, which is a format that combines both the certificate and the private key into a single file, you can use OpenSSL. Here's how to do it:
