@@ -197,7 +197,7 @@
 
     ,
         "url" : "https:\/\/aghdam.nl\/post\/openssl-generate-certificate\/",
-        "wordCount" : "554",
+        "wordCount" : "910",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -411,7 +411,7 @@
           </li>
           <li class="post__meta-item">
             <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">3-minute read</span>
+            <span class="post__meta-text">5-minute read</span>
           </li>
         </ul>
       <h2 id="install-openssl">Install OpenSSL</h2>
@@ -488,6 +488,32 @@
 </ol>
 <p>If you&rsquo;re using certificates for specific applications, you can run those applications and monitor their logs for any certificate-related errors or warnings. Most applications will log errors if they encounter issues with certificates.</p>
 <p>Remember that the effectiveness of these checks depends on the context in which you&rsquo;re using the certificates. Make sure you&rsquo;re using the correct paths and filenames in the commands, and adapt the checks to your specific setup and requirements.</p>
+<h2 id="configure-windows-to-use-the-certificate">Configure windows to use the certificate</h2>
+<p>To set up your Windows machine to use the same certificates when connecting to a Docker container running with HTTPS, you&rsquo;ll need to export the certificates from the container and import them into your Windows system&rsquo;s trusted certificate store. Here&rsquo;s how you can do it:</p>
+<ol>
+<li>Export Certificates from Docker Container:</li>
+</ol>
+<p>First, you need to copy the certificates from your running Docker container to your local machine. You can use the docker cp command to do this. Assuming your container is named my-container and you want to copy the certificates to a local directory certs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker cp my-container:/usr/local/share/ca-certificates/ certs/
+</span></span></code></pre></div><p>This command will copy the certificates from the specified directory inside the container to your local certs directory.</p>
+<ol start="2">
+<li>Import Certificates into Windows:</li>
+</ol>
+<p>After copying the certificates to your Windows machine, you can import them into the Windows Certificate Manager. Here&rsquo;s how:</p>
+<ul>
+<li>Open the Start menu and search for &ldquo;Manage computer certificates&rdquo; or &ldquo;certmgr.msc&rdquo;, and open the Certificate Manager.</li>
+<li>Navigate to the &ldquo;Trusted Root Certification Authorities&rdquo; folder on the left panel.</li>
+<li>Right-click on the folder and choose &ldquo;All Tasks&rdquo; &gt; &ldquo;Import&hellip;&rdquo;.</li>
+<li>Follow the Import Wizard to import the certificates. Choose the option to &ldquo;Place all certificates in the following store&rdquo; and select &ldquo;Trusted Root Certification Authorities&rdquo;.</li>
+<li>Browse to the location where you copied the certificates from the Docker container and select the certificate files (.crt files).</li>
+<li>Complete the wizard, and the certificates will be imported into the Windows trusted certificate store.</li>
+</ul>
+<ol start="3">
+<li>Verify Connection:</li>
+</ol>
+<p>Once the certificates are imported, you should be able to use applications on your Windows machine to connect to the Docker container using HTTPS. The certificates will be trusted by your system, and you shouldn&rsquo;t encounter SSL/TLS warnings or errors when connecting.</p>
+<p>Keep in mind that the above instructions assume you&rsquo;re using self-signed or custom certificates. If you&rsquo;re using certificates from a public CA, they might already be trusted by default on your Windows system.</p>
+<p>Please note that the steps and specific options might vary slightly based on the version of Windows you are using. Always make sure to verify the paths, filenames, and instructions based on your actual setup.</p>
 </div>
     <div class="post__footer">
       
