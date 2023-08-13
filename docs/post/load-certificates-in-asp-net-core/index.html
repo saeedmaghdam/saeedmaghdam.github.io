@@ -114,13 +114,13 @@
 <meta name="twitter:image" content="https://aghdam.nl/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content="Load Certificates in Asp Net Core"/>
-<meta name="twitter:description" content="Load certificates in asp.net core application To convert your server&rsquo;s certificate and private key files (server."/>
+<meta name="twitter:description" content="Generate certificates Using process described at Sample nginx with a self-signed certificate Using following command (recommended): dotnet dev-certs https -ep server."/>
 
 
 
   
   <meta property="og:title" content="Load Certificates in Asp Net Core" />
-<meta property="og:description" content="Load certificates in asp.net core application To convert your server&rsquo;s certificate and private key files (server." />
+<meta property="og:description" content="Generate certificates Using process described at Sample nginx with a self-signed certificate Using following command (recommended): dotnet dev-certs https -ep server." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://aghdam.nl/post/load-certificates-in-asp-net-core/" /><meta property="og:image" content="https://aghdam.nl/images/site-feature-image.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-08-14T00:57:33+02:00" />
@@ -142,7 +142,7 @@
         "alternativeHeadline": "",
         "description": "
       
-        Load certificates in asp.net core application To convert your server\u0026rsquo;s certificate and private key files (server.
+        Generate certificates Using process described at Sample nginx with a self-signed certificate Using following command (recommended): dotnet dev-certs https -ep server.
 
 
       
@@ -197,7 +197,7 @@
 
     ,
         "url" : "https:\/\/aghdam.nl\/post\/load-certificates-in-asp-net-core\/",
-        "wordCount" : "307",
+        "wordCount" : "330",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -414,7 +414,13 @@
             <span class="post__meta-text">2-minute read</span>
           </li>
         </ul>
-      <h2 id="load-certificates-in-aspnet-core-application">Load certificates in asp.net core application</h2>
+      <h2 id="generate-certificates">Generate certificates</h2>
+<ol>
+<li>Using process described at <a href="https://aghdam.nl/post/sample-nginx-with-self-signed-https-protocol/">Sample nginx with a self-signed certificate</a></li>
+<li>Using following command (<strong>recommended</strong>):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">dotnet dev-certs https -ep server.pfx -p PASSWORD
+</span></span></code></pre></div><h2 id="load-certificates-in-aspnet-core-application">Load certificates in asp.net core application</h2>
 <p>To convert your server&rsquo;s certificate and private key files (server.crt and server.key) into a PFX (Personal Information Exchange) format, which is a format that combines both the certificate and the private key into a single file, you can use OpenSSL. Here&rsquo;s how to do it:</p>
 <ol>
 <li>Convert the Certificate and Private Key to PEM Format (if needed):</li>
