@@ -197,7 +197,7 @@
 
     ,
         "url" : "https:\/\/aghdam.nl\/post\/sample-nginx-with-self-signed-https-protocol\/",
-        "wordCount" : "348",
+        "wordCount" : "509",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -411,7 +411,7 @@
           </li>
           <li class="post__meta-item">
             <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">2-minute read</span>
+            <span class="post__meta-text">3-minute read</span>
           </li>
         </ul>
       <h2 id="sample-nginx-with-a-self-signed-certificate">Sample nginx with a self-signed certificate</h2>
@@ -430,6 +430,15 @@
 </ol>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 </span></span></code></pre></div><ol start="4">
+<li>Generate server.pfx file:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">openssl pkcs12 -export -out server.pfx -inkey server.key -in server.crt
+</span></span></code></pre></div><p>server.pfx can be generated from a combination of server.crt and server.key. The server.pfx file is a format that typically contains both the private key and the corresponding public key (certificate) in a single file. This format is often used for configuring SSL/TLS on servers.</p>
+<p>To generate a server.pfx file, you&rsquo;ll need the following:</p>
+<p>a. server.crt: This is the public key certificate issued by a Certificate Authority (CA).
+b. server.key: This is the private key corresponding to the public key in the server.crt file.</p>
+<p>Keep in mind that the process might slightly vary depending on your environment and the tools you&rsquo;re using. Additionally, if you have a server.csr file (Certificate Signing Request), it&rsquo;s not directly used for generating a PFX file. The CSR is typically used to request a certificate from a CA, and the resulting certificate (server.crt) is combined with the private key (server.key) to create the PFX file.</p>
+<ol start="4">
 <li>Create a Dockerfile that will install the SSL certificate in the container:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FROM nginx
