@@ -30,6 +30,21 @@ openssl req -new -key server.key -out server.csr \
 openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 ```
 
+4. Generate server.pfx file:
+
+```ssh
+openssl pkcs12 -export -out server.pfx -inkey server.key -in server.crt
+```
+
+server.pfx can be generated from a combination of server.crt and server.key. The server.pfx file is a format that typically contains both the private key and the corresponding public key (certificate) in a single file. This format is often used for configuring SSL/TLS on servers.
+
+To generate a server.pfx file, you'll need the following:
+
+a. server.crt: This is the public key certificate issued by a Certificate Authority (CA).
+b. server.key: This is the private key corresponding to the public key in the server.crt file.
+
+Keep in mind that the process might slightly vary depending on your environment and the tools you're using. Additionally, if you have a server.csr file (Certificate Signing Request), it's not directly used for generating a PFX file. The CSR is typically used to request a certificate from a CA, and the resulting certificate (server.crt) is combined with the private key (server.key) to create the PFX file.
+
 4. Create a Dockerfile that will install the SSL certificate in the container:
 
 ```ssh
