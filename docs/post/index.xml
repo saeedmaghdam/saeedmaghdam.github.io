@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Saeed Aghdam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 14 Aug 2023 00:57:33 +0200</lastBuildDate><atom:link href="https://aghdam.nl/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Aug 2023 07:38:08 +0200</lastBuildDate><atom:link href="https://aghdam.nl/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generate Root Certificate and Use It to Sign Others</title>
+      <link>https://aghdam.nl/post/generate-root-certificate-and-use-it-to-sign-others/</link>
+      <pubDate>Wed, 16 Aug 2023 07:38:08 +0200</pubDate>
+      
+      <guid>https://aghdam.nl/post/generate-root-certificate-and-use-it-to-sign-others/</guid>
+      
+        <description>Generate root certificate and use it to sign other certificates Generate a Private Key for the Root CA: Generate a private key that will be used to sign your root CA certificate.</description>
+      
+    </item>
+    
     <item>
       <title>Load Certificates in Asp Net Core</title>
       <link>https://aghdam.nl/post/load-certificates-in-asp-net-core/</link>
