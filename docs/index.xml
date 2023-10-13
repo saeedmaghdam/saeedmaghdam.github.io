@@ -6,7 +6,18 @@
     <description>Recent content on Saeed Aghdam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 16 Aug 2023 07:38:08 +0200</lastBuildDate><atom:link href="https://aghdam.nl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Oct 2023 08:26:25 +0200</lastBuildDate><atom:link href="https://aghdam.nl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Can Influence Domain Name Resolution</title>
+      <link>https://aghdam.nl/post/what-can-influence-domain-name-resolution/</link>
+      <pubDate>Fri, 13 Oct 2023 08:26:25 +0200</pubDate>
+      
+      <guid>https://aghdam.nl/post/what-can-influence-domain-name-resolution/</guid>
+      
+        <description>What can influence domain name resolution Domain name resolution can be influenced by various components and mechanisms, and their priorities can differ depending on your network configuration.</description>
+      
+    </item>
+    
     <item>
       <title>Generate Root Certificate and Use It to Sign Others</title>
       <link>https://aghdam.nl/post/generate-root-certificate-and-use-it-to-sign-others/</link>
