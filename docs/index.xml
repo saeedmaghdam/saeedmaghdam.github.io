@@ -6,7 +6,18 @@
     <description>Recent content on Saeed Aghdam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 13 Oct 2023 08:26:25 +0200</lastBuildDate><atom:link href="https://aghdam.nl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Sep 2024 11:46:47 +0200</lastBuildDate><atom:link href="https://aghdam.nl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Network Configurations in Linux Distros</title>
+      <link>https://aghdam.nl/post/network-configurations-in-linux-distros/</link>
+      <pubDate>Sun, 01 Sep 2024 11:46:47 +0200</pubDate>
+      
+      <guid>https://aghdam.nl/post/network-configurations-in-linux-distros/</guid>
+      
+        <description>Changing IP Address Changing the IP address on a Linux system can be done in several ways, depending on whether you want to change it temporarily (for the current session) or permanently (so it persists across reboots).</description>
+      
+    </item>
+    
     <item>
       <title>What Can Influence Domain Name Resolution</title>
       <link>https://aghdam.nl/post/what-can-influence-domain-name-resolution/</link>

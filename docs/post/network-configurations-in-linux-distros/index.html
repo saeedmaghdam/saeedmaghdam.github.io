@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        Network Configurations in Linux Distros |
+      Saeed Aghdam
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.110.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Saeed Aghdam" />
+  <meta
+    name="description"
+    content="Call me Saeed"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.5794be192d21535bdd301561e043a96b6adbad2b5c08279deff459e4661c613f.css"
+      integrity="sha256-V5S&#43;GS0hU1vdMBVh4EOpa2rbrStcCCed7/RZ5GYcYT8="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7f3c2281c7f965ce3c64888aa452793252a0416909c181097f81d0a0f7d1624e.css"
+    integrity="sha256-fzwigcf5Zc48ZIiKpFJ5MlKgQWkJwYEJf4HQoPfRYk4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.35fc032da8ede6681675d20a2f862fb9e1045c1d512d495fcf862c054daffef2.css"
+    integrity="sha256-NfwDLajt5mgWddIKL4YvueEEXB1RLUlfz4YsBU2v/vI="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.3b92357925ea7284f0c6b0378396f39f470f7842ed9702f337e667c4026bf837.css"
+    integrity="sha256-O5I1eSXqcoTwxrA3g5bzn0cPeELtlwLzN&#43;ZnxAJr&#43;Dc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.ebb1096e1976e8cc4e2532cfa050b8f30eb13b8eb06be5cee3e38eb426b838ea.css"
+    integrity="sha256-67EJbhl26MxOJTLPoFC48w6xO46wa&#43;XO4&#43;OOtCa4OOo="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://aghdam.nl/post/network-configurations-in-linux-distros/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://aghdam.nl/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Network Configurations in Linux Distros"/>
+<meta name="twitter:description" content="Changing IP Address Changing the IP address on a Linux system can be done in several ways, depending on whether you want to change it temporarily (for the current session) or permanently (so it persists across reboots)."/>
+
+
+
+  
+  <meta property="og:title" content="Network Configurations in Linux Distros" />
+<meta property="og:description" content="Changing IP Address Changing the IP address on a Linux system can be done in several ways, depending on whether you want to change it temporarily (for the current session) or permanently (so it persists across reboots)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aghdam.nl/post/network-configurations-in-linux-distros/" /><meta property="og:image" content="https://aghdam.nl/images/site-feature-image.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-09-01T11:46:47+02:00" />
+<meta property="article:modified_time" content="2024-09-01T11:46:47+02:00" /><meta property="og:site_name" content="Saeed Aghdam" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Network Configurations in Linux Distros",
+        "headline": "Network Configurations in Linux Distros",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Changing IP Address Changing the IP address on a Linux system can be done in several ways, depending on whether you want to change it temporarily (for the current session) or permanently (so it persists across reboots).
+
+
+      
+
+
+    ",
+        "inLanguage": "en-US",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/aghdam.nl\/post\/network-configurations-in-linux-distros\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Saeed Aghdam"
+        },
+        "copyrightYear" : "2024",
+        "dateCreated": "2024-09-01T11:46:47.00Z",
+        "datePublished": "2024-09-01T11:46:47.00Z",
+        "dateModified": "2024-09-01T11:46:47.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Saeed Aghdam",
+            "url": "https://aghdam.nl",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/aghdam.nl\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://aghdam.nl/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/aghdam.nl\/post\/network-configurations-in-linux-distros\/",
+        "wordCount" : "1132",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Saeed Aghdam</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Call me Saeed</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/saeedmaghdam/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/saeedmaghdam"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:saeed@aghdam.nl"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Saeed Aghdam
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Network Configurations in Linux Distros</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  1/9/2024
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">6-minute read</span>
+          </li>
+        </ul>
+      <h2 id="changing-ip-address">Changing IP Address</h2>
+<p>Changing the IP address on a Linux system can be done in several ways, depending on whether you want to change it temporarily (for the current session) or permanently (so it persists across reboots). The method you choose will depend on your specific needs and the environment you&rsquo;re working in.</p>
+<h3 id="methods-to-change-the-ip-address">Methods to Change the IP Address:</h3>
+<ol>
+<li>
+<p><strong>Using the <code>ip</code> Command</strong>:</p>
+<ul>
+<li><strong>Temporary Change</strong>: The <code>ip</code> command can change the IP address for the current session.</li>
+<li><strong>Command</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ip addr add &lt;new-ip-address&gt;/&lt;subnet-mask&gt; dev &lt;interface&gt;
+</span></span><span class="line"><span class="cl">sudo ip addr del &lt;old-ip-address&gt;/&lt;subnet-mask&gt; dev &lt;interface&gt;
+</span></span></code></pre></div></li>
+<li><strong>Example</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ip addr add 192.168.1.100/24 dev eth0
+</span></span><span class="line"><span class="cl">sudo ip addr del 192.168.1.50/24 dev eth0
+</span></span></code></pre></div></li>
+<li><strong>Persistent?</strong>: No, this change will be lost after a reboot.</li>
+</ul>
+</li>
+<li>
+<p><strong>Using the <code>ifconfig</code> Command</strong>:</p>
+<ul>
+<li><strong>Temporary Change</strong>: Similar to the <code>ip</code> command but older and less powerful.</li>
+<li><strong>Command</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ifconfig &lt;interface&gt; &lt;new-ip-address&gt; netmask &lt;subnet-mask&gt;
+</span></span></code></pre></div></li>
+<li><strong>Example</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ifconfig eth0 192.168.1.100 netmask 255.255.255.0
+</span></span></code></pre></div></li>
+<li><strong>Persistent?</strong>: No, this change will also be lost after a reboot.</li>
+</ul>
+</li>
+<li>
+<p><strong>Editing Network Configuration Files</strong>:</p>
+<ul>
+<li><strong>Permanent Change</strong>: This method ensures the IP address change persists across reboots.</li>
+<li><strong>For Ubuntu/Debian</strong>:
+<ul>
+<li>Edit the <code>/etc/network/interfaces</code> file:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/network/interfaces
+</span></span></code></pre></div></li>
+<li>Example configuration:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">auto eth0
+</span></span><span class="line"><span class="cl">iface eth0 inet static
+</span></span><span class="line"><span class="cl">    address 192.168.1.100
+</span></span><span class="line"><span class="cl">    netmask 255.255.255.0
+</span></span><span class="line"><span class="cl">    gateway 192.168.1.1
+</span></span></code></pre></div></li>
+<li>Apply changes:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart networking
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li><strong>For Red Hat/CentOS/Fedora</strong>:
+<ul>
+<li>Edit the configuration file for your interface in <code>/etc/sysconfig/network-scripts/</code> (e.g., <code>ifcfg-eth0</code>):
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/sysconfig/network-scripts/ifcfg-eth0
+</span></span></code></pre></div></li>
+<li>Example configuration:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">BOOTPROTO</span><span class="o">=</span>static
+</span></span><span class="line"><span class="cl"><span class="nv">IPADDR</span><span class="o">=</span>192.168.1.100
+</span></span><span class="line"><span class="cl"><span class="nv">NETMASK</span><span class="o">=</span>255.255.255.0
+</span></span><span class="line"><span class="cl"><span class="nv">GATEWAY</span><span class="o">=</span>192.168.1.1
+</span></span></code></pre></div></li>
+<li>Apply changes:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart network
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Using Network Manager (for GUI-based environments)</strong>:</p>
+<ul>
+<li><strong>Temporary or Permanent Change</strong>: This method is more common in desktop environments or systems using <code>NetworkManager</code>.</li>
+<li><strong>Command Line with <code>nmcli</code></strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nmcli con mod &lt;connection-name&gt; ipv4.addresses &lt;new-ip-address&gt;/&lt;subnet-mask&gt;
+</span></span><span class="line"><span class="cl">sudo nmcli con up &lt;connection-name&gt;
+</span></span></code></pre></div></li>
+<li><strong>GUI Method</strong>:
+<ul>
+<li>Go to Network settings.</li>
+<li>Select the network interface.</li>
+<li>Modify the IPv4 settings to static, then enter the new IP address, subnet mask, and gateway.</li>
+</ul>
+</li>
+<li><strong>Persistent?</strong>: Yes, changes made through <code>nmcli</code> or the GUI will persist after reboots.</li>
+</ul>
+</li>
+</ol>
+<h3 id="choosing-the-right-method">Choosing the Right Method:</h3>
+<ul>
+<li>
+<p><strong>Temporary vs. Permanent</strong>:</p>
+<ul>
+<li>If you need a <strong>temporary</strong> change (e.g., for testing or troubleshooting), use the <code>ip</code> or <code>ifconfig</code> command.</li>
+<li>For a <strong>permanent</strong> change (to ensure the IP address stays the same after reboot), edit the appropriate network configuration files or use Network Manager.</li>
+</ul>
+</li>
+<li>
+<p><strong>Distribution</strong>:</p>
+<ul>
+<li>On <strong>Ubuntu/Debian</strong> systems, the <code>/etc/network/interfaces</code> method is commonly used, although newer systems may rely on <code>netplan</code> (which uses YAML configuration files).</li>
+<li>On <strong>Red Hat/CentOS/Fedora</strong> systems, you typically edit <code>/etc/sysconfig/network-scripts/</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>GUI vs. Command Line</strong>:</p>
+<ul>
+<li>If you prefer a <strong>GUI</strong> and are using a desktop environment, the Network Manager tool (accessible through system settings) might be the easiest option.</li>
+<li>For <strong>servers or command-line only</strong> environments, editing the network configuration files or using <code>nmcli</code> is recommended.</li>
+</ul>
+</li>
+</ul>
+<h3 id="additional-considerations">Additional Considerations:</h3>
+<ul>
+<li><strong>DHCP vs. Static</strong>: Ensure you’re aware of whether your system should be using a DHCP or a static IP. Switching from DHCP to static may require additional configuration, such as setting up DNS servers.</li>
+<li><strong>Network Services</strong>: After changing the IP address, you may need to restart network services or the system to apply changes fully.</li>
+<li><strong>Compatibility</strong>: Ensure that the method you choose is compatible with your Linux distribution and version, as there might be slight variations in the file paths or commands.</li>
+</ul>
+<p>By choosing the right method based on these factors, you can effectively change the IP address on your Linux system to suit your needs.</p>
+<h2 id="configure-dns-servers">Configure DNS Servers</h2>
+<p>Setting DNS servers in Linux can be done in several ways, depending on your distribution, system configuration, and whether the change should be temporary or permanent. Here&rsquo;s a breakdown of the different methods and how to choose the best one for your needs.</p>
+<h3 id="methods-to-set-dns-servers-in-linux">Methods to Set DNS Servers in Linux</h3>
+<ol>
+<li>
+<p><strong>Modifying <code>/etc/resolv.conf</code> Directly</strong>:</p>
+<ul>
+<li><strong>Description</strong>: The <code>/etc/resolv.conf</code> file contains the DNS server addresses that the system will use for resolving domain names.</li>
+<li><strong>Command</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/resolv.conf
+</span></span></code></pre></div></li>
+<li><strong>Example</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nameserver 8.8.8.8
+</span></span><span class="line"><span class="cl">nameserver 8.8.4.4
+</span></span></code></pre></div></li>
+<li><strong>Persistent?</strong>: No, this method is not persistent across reboots if your system uses a service like <code>NetworkManager</code>, <code>systemd-resolved</code>, or DHCP, which may overwrite this file.</li>
+</ul>
+</li>
+<li>
+<p><strong>Using Network Manager</strong>:</p>
+<ul>
+<li><strong>GUI Method</strong>:
+<ul>
+<li>Go to Network settings in your desktop environment.</li>
+<li>Select your connection, then go to the &ldquo;IPv4&rdquo; or &ldquo;IPv6&rdquo; settings.</li>
+<li>Set the DNS servers under the DNS field.</li>
+</ul>
+</li>
+<li><strong>Command Line with <code>nmcli</code></strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nmcli con mod &lt;connection-name&gt; ipv4.dns <span class="s2">&#34;8.8.8.8 8.8.4.4&#34;</span>
+</span></span><span class="line"><span class="cl">sudo nmcli con up &lt;connection-name&gt;
+</span></span></code></pre></div></li>
+<li><strong>Persistent?</strong>: Yes, changes made through <code>NetworkManager</code> will persist across reboots.</li>
+<li><strong>Note</strong>: This is common in desktop environments or systems where NetworkManager manages the network settings.</li>
+</ul>
+</li>
+<li>
+<p><strong>Using <code>systemd-resolved</code></strong>:</p>
+<ul>
+<li><strong>Description</strong>: <code>systemd-resolved</code> is a service that provides network name resolution to local applications.</li>
+<li><strong>Edit Configuration</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/systemd/resolved.conf
+</span></span></code></pre></div></li>
+<li><strong>Example</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>Resolve<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DNS</span><span class="o">=</span>8.8.8.8 8.8.4.4
+</span></span><span class="line"><span class="cl"><span class="nv">FallbackDNS</span><span class="o">=</span>1.1.1.1 1.0.0.1
+</span></span></code></pre></div></li>
+<li><strong>Apply Changes</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart systemd-resolved
+</span></span></code></pre></div></li>
+<li><strong>Link to <code>/etc/resolv.conf</code></strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+</span></span></code></pre></div></li>
+<li><strong>Persistent?</strong>: Yes, changes are persistent and managed by <code>systemd-resolved</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Editing Interface-Specific Configuration Files</strong>:</p>
+<ul>
+<li><strong>For Ubuntu/Debian</strong> (with <code>netplan</code>):
+<ul>
+<li><strong>Edit Netplan Configuration</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/netplan/01-netcfg.yaml
+</span></span></code></pre></div></li>
+<li><strong>Example</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">network</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ethernets</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">eth0</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">dhcp4</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">nameservers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">addresses</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="m">8.8.8.8</span><span class="p">,</span><span class="w"> </span><span class="m">8.8.4.4</span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div></li>
+<li><strong>Apply Changes</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo netplan apply
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li><strong>For Red Hat/CentOS/Fedora</strong>:
+<ul>
+<li><strong>Edit Interface Configuration</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/sysconfig/network-scripts/ifcfg-eth0
+</span></span></code></pre></div></li>
+<li><strong>Example</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">DNS1</span><span class="o">=</span>8.8.8.8
+</span></span><span class="line"><span class="cl"><span class="nv">DNS2</span><span class="o">=</span>8.8.4.4
+</span></span></code></pre></div></li>
+<li><strong>Restart Network Service</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart network
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li><strong>Persistent?</strong>: Yes, these changes are persistent across reboots.</li>
+</ul>
+</li>
+<li>
+<p><strong>Configuring DHCP Client</strong>:</p>
+<ul>
+<li><strong>Description</strong>: If you&rsquo;re using DHCP and want to configure specific DNS servers, you can set this in the DHCP client configuration.</li>
+<li><strong>For <code>dhclient</code></strong>:
+<ul>
+<li><strong>Edit the configuration</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/dhcp/dhclient.conf
+</span></span></code></pre></div></li>
+<li><strong>Example</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">supersede domain-name-servers 8.8.8.8, 8.8.4.4<span class="p">;</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li><strong>Restart Network Interface</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dhclient -r <span class="o">&amp;&amp;</span> sudo dhclient
+</span></span></code></pre></div></li>
+<li><strong>Persistent?</strong>: Yes, this method is persistent and instructs the DHCP client to use specified DNS servers instead of those provided by the DHCP server.</li>
+</ul>
+</li>
+</ol>
+<h3 id="choosing-the-right-method-1">Choosing the Right Method:</h3>
+<ol>
+<li>
+<p><strong>Temporary vs. Permanent</strong>:</p>
+<ul>
+<li>If you need a <strong>temporary change</strong> for testing or troubleshooting, directly editing <code>/etc/resolv.conf</code> might be sufficient, but it won&rsquo;t persist across reboots.</li>
+<li>For a <strong>permanent solution</strong>, use Network Manager, <code>systemd-resolved</code>, or modify the interface-specific configuration files.</li>
+</ul>
+</li>
+<li>
+<p><strong>Distribution and Configuration Management</strong>:</p>
+<ul>
+<li><strong>Ubuntu/Debian</strong>: If you’re using Netplan or <code>systemd-resolved</code>, follow those specific methods. Older systems or minimal installations may still use the traditional <code>/etc/network/interfaces</code> method.</li>
+<li><strong>Red Hat/CentOS/Fedora</strong>: Configuration typically happens within <code>/etc/sysconfig/network-scripts/</code>. If you&rsquo;re using <code>NetworkManager</code>, that should be your go-to method.</li>
+</ul>
+</li>
+<li>
+<p><strong>Network Manager vs. Manual Configuration</strong>:</p>
+<ul>
+<li>If <strong>NetworkManager</strong> is managing your network, use <code>nmcli</code> or the GUI. It’s the preferred tool as it manages all aspects of networking on systems where it&rsquo;s enabled.</li>
+<li>For <strong>servers or non-GUI environments</strong>, where NetworkManager may not be installed, manual configuration of the network scripts or using <code>systemd-resolved</code> is more appropriate.</li>
+</ul>
+</li>
+<li>
+<p><strong>Consistency and Control</strong>:</p>
+<ul>
+<li>If you want full control over DNS settings and consistency across different networking tools and environments, consider using <code>systemd-resolved</code>. It centralizes DNS resolution and can be more robust in complex setups.</li>
+</ul>
+</li>
+<li>
+<p><strong>DHCP Considerations</strong>:</p>
+<ul>
+<li>If your system receives IP configuration via <strong>DHCP</strong> but you need to override the DNS settings, modify the DHCP client configuration (<code>dhclient.conf</code>) to enforce the use of specific DNS servers.</li>
+</ul>
+</li>
+</ol>
+<p>By selecting the method that best matches your system setup, administrative practices, and persistence needs, you can effectively manage DNS server settings on your Linux system.</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Saeed Aghdam
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
+</html>
