@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html
   dir="ltr"
   lang="en"
@@ -7,7 +7,7 @@
     class="html theme--light"
   
 ><head>
-  <title>
+  <meta charset="utf-8" /><title>
     
       
         Sample Nginx With Self Signed Https Protocol |
@@ -15,8 +15,7 @@
 
   </title>
 
-  
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.110.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="generator" content="Hugo 0.169.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="Saeed Aghdam" />
   <meta
     name="description"
@@ -24,22 +23,12 @@
   />
   
   
-    
-    
-    <link
-      rel="stylesheet"
-      href="/scss/main.min.5794be192d21535bdd301561e043a96b6adbad2b5c08279deff459e4661c613f.css"
-      integrity="sha256-V5S&#43;GS0hU1vdMBVh4EOpa2rbrStcCCed7/RZ5GYcYT8="
-      crossorigin="anonymous"
-      type="text/css"
-    />
-  
-
-  
+        <link rel="stylesheet" href="/css/anatole.min.d1a2db4db62630dc690a91ef034ed2fbecab93af4a610b9b8966d9f96705289c.css" integrity="sha256-0aLbTbYmMNxpCpHvA07S&#43;&#43;yrk69KYQubiWbZ&#43;WcFKJw=" crossorigin="anonymous" />
+      
   <link
     rel="stylesheet"
-    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
-    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    href="/css/markupHighlight.min.f8ba48d3fd92c731701d9634494275b2f2bc2ad0bea19b438feb41b25052f83b.css"
+    integrity="sha256-&#43;LpI0/2SxzFwHZY0SUJ1svK8KtC&#43;oZtDj&#43;tBslBS&#43;Ds="
     crossorigin="anonymous"
     type="text/css"
   />
@@ -47,32 +36,32 @@
   
   <link
     rel="stylesheet"
-    href="/fontawesome/css/fontawesome.min.7f3c2281c7f965ce3c64888aa452793252a0416909c181097f81d0a0f7d1624e.css"
-    integrity="sha256-fzwigcf5Zc48ZIiKpFJ5MlKgQWkJwYEJf4HQoPfRYk4="
+    href="/fontawesome/css/fontawesome.min.f5bfda6063b63dee667171520cd2825388a326148518bf652e6aec551eb69454.css"
+    integrity="sha256-9b/aYGO2Pe5mcXFSDNKCU4ijJhSFGL9lLmrsVR62lFQ="
     crossorigin="anonymous"
     type="text/css"
   />
   
   <link
     rel="stylesheet"
-    href="/fontawesome/css/solid.min.35fc032da8ede6681675d20a2f862fb9e1045c1d512d495fcf862c054daffef2.css"
-    integrity="sha256-NfwDLajt5mgWddIKL4YvueEEXB1RLUlfz4YsBU2v/vI="
+    href="/fontawesome/css/solid.min.4f793b4ad721632e8636e10409738194168b25fa39ef720755b51ae67cb1b998.css"
+    integrity="sha256-T3k7StchYy6GNuEECXOBlBaLJfo573IHVbUa5nyxuZg="
     crossorigin="anonymous"
     type="text/css"
   />
   
   <link
     rel="stylesheet"
-    href="/fontawesome/css/regular.min.3b92357925ea7284f0c6b0378396f39f470f7842ed9702f337e667c4026bf837.css"
-    integrity="sha256-O5I1eSXqcoTwxrA3g5bzn0cPeELtlwLzN&#43;ZnxAJr&#43;Dc="
+    href="/fontawesome/css/regular.min.fa1ba03fb68cef9351135e3d1ee65b5adf866c3b3c6e293132d1595c9443dd8c.css"
+    integrity="sha256-&#43;hugP7aM75NRE149HuZbWt&#43;GbDs8bikxMtFZXJRD3Yw="
     crossorigin="anonymous"
     type="text/css"
   />
   
   <link
     rel="stylesheet"
-    href="/fontawesome/css/brands.min.ebb1096e1976e8cc4e2532cfa050b8f30eb13b8eb06be5cee3e38eb426b838ea.css"
-    integrity="sha256-67EJbhl26MxOJTLPoFC48w6xO46wa&#43;XO4&#43;OOtCa4OOo="
+    href="/fontawesome/css/brands.min.b5644e954c2e2420d560233b983da648c9df9daf82772e02d08221e046a4280d.css"
+    integrity="sha256-tWROlUwuJCDVYCM7mD2mSMnfna&#43;Cdy4C0IIh4EakKA0="
     crossorigin="anonymous"
     type="text/css"
   />
@@ -83,7 +72,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
 
   <link rel="canonical" href="https://aghdam.nl/post/sample-nginx-with-self-signed-https-protocol/" />
-
   
   
   
@@ -100,36 +88,42 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
-      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      src="/js/anatole-theme-switcher.min.8724ddf9268dee451060f191961647573c7f592fbccc6d858746236b3f915813.js"
+      integrity="sha256-hyTd&#43;SaN7kUQYPGRlhZHVzx/WS&#43;8zG2Fh0Yjaz&#43;RWBM="
       crossorigin="anonymous"
     ></script>
   
 
   
 
+  
 
   
-  <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://aghdam.nl/images/site-feature-image.png"/>
-
-<meta name="twitter:title" content="Sample Nginx With Self Signed Https Protocol"/>
-<meta name="twitter:description" content="Sample nginx with a self-signed certificate Steps on how to generate a self-signed SSL certificate using OpenSSL, install it in a Docker container, and access it using HTTPS protocol and port 5001 in your Windows machine:"/>
-
-
-
-  
-  <meta property="og:title" content="Sample Nginx With Self Signed Https Protocol" />
-<meta property="og:description" content="Sample nginx with a self-signed certificate Steps on how to generate a self-signed SSL certificate using OpenSSL, install it in a Docker container, and access it using HTTPS protocol and port 5001 in your Windows machine:" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://aghdam.nl/post/sample-nginx-with-self-signed-https-protocol/" /><meta property="og:image" content="https://aghdam.nl/images/site-feature-image.png"/><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-08-14T00:03:12+02:00" />
-<meta property="article:modified_time" content="2023-08-14T00:03:12+02:00" /><meta property="og:site_name" content="Saeed Aghdam" />
-
 
 
   
   
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://aghdam.nl/images/site-feature-image.png">
+	<meta name="twitter:title" content="Sample Nginx With Self Signed Https Protocol">
+	<meta name="twitter:description" content="Sample nginx with a self-signed certificate Steps on how to generate a self-signed SSL certificate using OpenSSL, install it in a Docker container, and access it using HTTPS protocol and port 5001 in your Windows machine:">
+
+
+
+  
+  <meta property="og:url" content="https://aghdam.nl/post/sample-nginx-with-self-signed-https-protocol/">
+	<meta property="og:site_name" content="Saeed Aghdam">
+	<meta property="og:title" content="Sample Nginx With Self Signed Https Protocol">
+	<meta property="og:description" content="Sample nginx with a self-signed certificate Steps on how to generate a self-signed SSL certificate using OpenSSL, install it in a Docker container, and access it using HTTPS protocol and port 5001 in your Windows machine:">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2023-08-14T00:03:12+02:00">
+		<meta property="article:modified_time" content="2023-08-14T00:03:12+02:00">
+		<meta property="og:image" content="https://aghdam.nl/images/site-feature-image.png">
+
+
+
   
   
   <script type="application/ld+json">
@@ -142,14 +136,16 @@
         "alternativeHeadline": "",
         "description": "
       
-        Sample nginx with a self-signed certificate Steps on how to generate a self-signed SSL certificate using OpenSSL, install it in a Docker container, and access it using HTTPS protocol and port 5001 in your Windows machine:
+        \u003ch2 id=\u0022sample-nginx-with-a-self-signed-certificate\u0022\u003eSample nginx with a self-signed certificate\u003c\/h2\u003e\n\u003cp\u003eSteps on how to generate a self-signed SSL certificate using OpenSSL, install it in a Docker container, and access it using HTTPS protocol and port 5001 in your Windows machine:\u003c\/p\u003e
 
 
       
 
 
     ",
-        "inLanguage": "en-US",
+        "license": "",
+        
+        "inLanguage": "\"en-US\"",
         "isFamilyFriendly": "true",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -171,14 +167,13 @@
             "@type": "Person",
             "name": "Saeed Aghdam"
         },
-        "copyrightYear" : "2023",
         "dateCreated": "2023-08-14T00:03:12.00Z",
         "datePublished": "2023-08-14T00:03:12.00Z",
         "dateModified": "2023-08-14T00:03:12.00Z",
         "publisher":{
             "@type":"Organization",
             "name": "Saeed Aghdam",
-            "url": "https://aghdam.nl",
+            "url": "https://aghdam.nl/",
             "logo": {
                 "@type": "ImageObject",
                 "url": "https:\/\/aghdam.nl\/favicons\/favicon-32x32.png",
@@ -204,6 +199,11 @@
   </script>
 
 
+
+
+  
+  
+  
 </head>
 <body class="body">
     <div class="wrapper">
@@ -211,12 +211,12 @@
         
           class="wrapper__sidebar"
         
-      ><div
-  class="sidebar
-    animated fadeInDown
-  "
->
-  <div class="sidebar__content">
+      ><div class="sidebar">
+  <div
+    class="sidebar__content 
+      animated fadeInDown
+    "
+  >
     <div class="sidebar__introduction">
       <img
         class="sidebar__introduction-profileimage"
@@ -225,7 +225,7 @@
       />
       
         <div class="sidebar__introduction-title">
-          <a href="/">Saeed Aghdam</a>
+          <a href="/">I&#39;m Saeed</a>
         </div>
       
       <div class="sidebar__introduction-description">
@@ -272,30 +272,22 @@
       
     </ul>
   </div><footer class="footer footer__sidebar">
-  <ul class="footer__list">
+  <ul
+    class="footer__list 
+      animated fadeInDown
+    "
+  >
     <li class="footer__item">
       &copy;
       
         Saeed Aghdam
-        2024
+        2026
       
     </li>
     
   </ul>
 </footer>
-  
-  <script
-    type="text/javascript"
-    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
-    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
-    crossorigin="anonymous"
-  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
-      defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
-      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
-      crossorigin="anonymous"
-      onload="renderMathInElement(document.body);"
-    ></script></div>
+</div>
 </aside>
       <main
         
@@ -319,6 +311,7 @@
         
         
           <li class="nav__list-item">
+            
             <a
               
               href="/"
@@ -333,6 +326,7 @@
         
         
           <li class="nav__list-item">
+            
             <a
               
               href="/post/"
@@ -347,6 +341,7 @@
         
         
           <li class="nav__list-item">
+            
             <a
               
               href="/about/"
@@ -361,6 +356,7 @@
         
         
           <li class="nav__list-item">
+            
             <a
               
               href="/contact/"
@@ -395,7 +391,9 @@
   >
     
     <div class="post__content">
-      <h1>Sample Nginx With Self Signed Https Protocol</h1>
+      
+        <h1>Sample Nginx With Self Signed Https Protocol</h1>
+      
       
         <ul class="post__meta">
           <li class="post__meta-item">
@@ -432,7 +430,7 @@
 </span></span></code></pre></div><ol start="4">
 <li>Generate server.pfx file:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">openssl pkcs12 -export -out server.pfx -inkey server.key -in server.crt
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">openssl</span> <span class="n">pkcs12</span> <span class="o">-</span><span class="k">export</span> <span class="o">-</span><span class="n">out</span> <span class="n">server</span><span class="o">.</span><span class="n">pfx</span> <span class="o">-</span><span class="n">inkey</span> <span class="n">server</span><span class="o">.</span><span class="n">key</span> <span class="o">-</span><span class="ow">in</span> <span class="n">server</span><span class="o">.</span><span class="n">crt</span>
 </span></span></code></pre></div><p>server.pfx can be generated from a combination of server.crt and server.key. The server.pfx file is a format that typically contains both the private key and the corresponding public key (certificate) in a single file. This format is often used for configuring SSL/TLS on servers.</p>
 <p>To generate a server.pfx file, you&rsquo;ll need the following:</p>
 <p>a. server.crt: This is the public key certificate issued by a Certificate Authority (CA).
@@ -490,28 +488,27 @@ This is a self-signed certificate.</li>
 
       </main>
     </div><footer class="footer footer__base">
-  <ul class="footer__list">
+  <ul
+    class="footer__list 
+      animated fadeInDown
+    "
+  >
     <li class="footer__item">
       &copy;
       
         Saeed Aghdam
-        2024
+        2026
       
     </li>
     
   </ul>
 </footer>
+
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
-    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    src="/js/medium-zoom.min.9531b4a2217a70c5a1fce89c1f81c9ebbdd586708fcd4130b417320c7230c8d6.js"
+    integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
     crossorigin="anonymous"
-  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
-      defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
-      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
-      crossorigin="anonymous"
-      onload="renderMathInElement(document.body);"
-    ></script></body>
+  ></script></body>
 </html>

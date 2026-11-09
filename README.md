@@ -15,7 +15,7 @@ git commit -m "{COMMIT_MESSAGE}"
 
 ### 3. Update dist folder
 ```sh
-huge
+./hugo.exe
 ```
 
 ### 4. Commit and push

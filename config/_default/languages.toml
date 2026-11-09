@@ -1,5 +1,5 @@
 [en]
 title = "Saeed Aghdam"
 weight = 1
-LanguageName = "EN"
+label = "EN"
 contentDir = "content/english"

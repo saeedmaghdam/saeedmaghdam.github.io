@@ -14,7 +14,8 @@
       
       <guid>https://aghdam.nl/post/network-configurations-in-linux-distros/</guid>
       
-        <description>Changing IP Address Changing the IP address on a Linux system can be done in several ways, depending on whether you want to change it temporarily (for the current session) or permanently (so it persists across reboots).</description>
+        <description>&lt;h2 id=&#34;changing-ip-address&#34;&gt;Changing IP Address&lt;/h2&gt;
+&lt;p&gt;Changing the IP address on a Linux system can be done in several ways, depending on whether you want to change it temporarily (for the current session) or permanently (so it persists across reboots). The method you choose will depend on your specific needs and the environment you&amp;rsquo;re working in.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,7 +26,8 @@
       
       <guid>https://aghdam.nl/post/what-can-influence-domain-name-resolution/</guid>
       
-        <description>What can influence domain name resolution Domain name resolution can be influenced by various components and mechanisms, and their priorities can differ depending on your network configuration.</description>
+        <description>&lt;h2 id=&#34;what-can-influence-domain-name-resolution&#34;&gt;What can influence domain name resolution&lt;/h2&gt;
+&lt;p&gt;Domain name resolution can be influenced by various components and mechanisms, and their priorities can differ depending on your network configuration. Here are some key elements that can impact domain name resolution and their general priorities:&lt;/p&gt;</description>
       
     </item>
     
@@ -36,7 +38,11 @@
       
       <guid>https://aghdam.nl/post/generate-root-certificate-and-use-it-to-sign-others/</guid>
       
-        <description>Generate root certificate and use it to sign other certificates Generate a Private Key for the Root CA: Generate a private key that will be used to sign your root CA certificate.</description>
+        <description>&lt;h2 id=&#34;generate-root-certificate-and-use-it-to-sign-other-certificates&#34;&gt;Generate root certificate and use it to sign other certificates&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Generate a Private Key for the Root CA:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Generate a private key that will be used to sign your root CA certificate. Here&amp;rsquo;s an example command to generate a 2048-bit RSA private key:&lt;/p&gt;</description>
       
     </item>
     
@@ -47,7 +53,14 @@
       
       <guid>https://aghdam.nl/post/load-certificates-in-asp-net-core/</guid>
       
-        <description>Generate certificates Using process described at Sample nginx with a self-signed certificate Using following command (recommended): dotnet dev-certs https -ep server.</description>
+        <description>&lt;h2 id=&#34;generate-certificates&#34;&gt;Generate certificates&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Using process described at &lt;a href=&#34;https://aghdam.nl/post/sample-nginx-with-self-signed-https-protocol/&#34;&gt;Sample nginx with a self-signed certificate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Using following command (&lt;strong&gt;recommended&lt;/strong&gt;):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dotnet dev-certs https -ep server.pfx -p PASSWORD
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;load-certificates-in-aspnet-core-application&#34;&gt;Load certificates in asp.net core application&lt;/h2&gt;
+&lt;p&gt;To convert your server&amp;rsquo;s certificate and private key files (server.crt and server.key) into a PFX (Personal Information Exchange) format, which is a format that combines both the certificate and the private key into a single file, you can use OpenSSL. Here&amp;rsquo;s how to do it:&lt;/p&gt;</description>
       
     </item>
     
@@ -58,7 +71,8 @@
       
       <guid>https://aghdam.nl/post/sample-nginx-with-self-signed-https-protocol/</guid>
       
-        <description>Sample nginx with a self-signed certificate Steps on how to generate a self-signed SSL certificate using OpenSSL, install it in a Docker container, and access it using HTTPS protocol and port 5001 in your Windows machine:</description>
+        <description>&lt;h2 id=&#34;sample-nginx-with-a-self-signed-certificate&#34;&gt;Sample nginx with a self-signed certificate&lt;/h2&gt;
+&lt;p&gt;Steps on how to generate a self-signed SSL certificate using OpenSSL, install it in a Docker container, and access it using HTTPS protocol and port 5001 in your Windows machine:&lt;/p&gt;</description>
       
     </item>
     
@@ -69,7 +83,7 @@
       
       <guid>https://aghdam.nl/post/improve-creativity/</guid>
       
-        <description>Improving creativity is a gradual process that requires practice and exposure to various stimuli.</description>
+        <description>&lt;p&gt;Improving creativity is a gradual process that requires practice and exposure to various stimuli.&lt;/p&gt;</description>
       
     </item>
     
@@ -80,7 +94,8 @@
       
       <guid>https://aghdam.nl/post/manually-configuring-https-for-local-development/</guid>
       
-        <description>Configuring SSL for Local Development with .NET 6 and HttpListener When developing web applications on your local machine, it&amp;rsquo;s essential to simulate as closely as possible the conditions of your live environment.</description>
+        <description>&lt;h2 id=&#34;configuring-ssl-for-local-development-with-net-6-and-httplistener&#34;&gt;Configuring SSL for Local Development with .NET 6 and HttpListener&lt;/h2&gt;
+&lt;p&gt;When developing web applications on your local machine, it&amp;rsquo;s essential to simulate as closely as possible the conditions of your live environment. One key part of this is implementing SSL. In this article, we&amp;rsquo;ll guide you through the process of importing a .pfx certificate into the Microsoft Management Console (MMC), binding it to a specific port using &lt;code&gt;netsh&lt;/code&gt;, and then validating the binding.&lt;/p&gt;</description>
       
     </item>
     
@@ -91,7 +106,8 @@
       
       <guid>https://aghdam.nl/post/openssl-generate-certificate/</guid>
       
-        <description>Install OpenSSL Visit one of the following websites and download the proper version of SSL for your operating system:</description>
+        <description>&lt;h2 id=&#34;install-openssl&#34;&gt;Install OpenSSL&lt;/h2&gt;
+&lt;p&gt;Visit one of the following websites and download the proper version of SSL for your operating system:&lt;/p&gt;</description>
       
     </item>
     
@@ -102,7 +118,8 @@
       
       <guid>https://aghdam.nl/post/alternatives-to-ngrok/</guid>
       
-        <description>Explore the World of Free Ngrok Alternatives In the world of software development, ngrok has become a must-have tool.</description>
+        <description>&lt;h3 id=&#34;explore-the-world-of-free-ngrok-alternatives&#34;&gt;Explore the World of Free Ngrok Alternatives&lt;/h3&gt;
+&lt;p&gt;In the world of software development, ngrok has become a must-have tool. It provides developers with the ability to expose local servers behind NATs and firewalls to the public internet over secure tunnels. But what if you&amp;rsquo;re looking for a free alternative to ngrok? Luckily, several robust options are ready to step in and get the job done. Here are some of the top alternatives to consider:&lt;/p&gt;</description>
       
     </item>
     
@@ -113,7 +130,7 @@
       
       <guid>https://aghdam.nl/post/passing-metadata-fields-to-arguments-in-kubernetes-yaml-files/</guid>
       
-        <description>Passing metadata fields like metadata.name or metadata.namespace to the arguments field in Kubernetes YAML files is a powerful way to dynamically configure your containers and pods.</description>
+        <description>&lt;p&gt;Passing metadata fields like &lt;code&gt;metadata.name&lt;/code&gt; or &lt;code&gt;metadata.namespace&lt;/code&gt; to the arguments field in Kubernetes YAML files is a powerful way to dynamically configure your containers and pods. This can be especially useful when you need to pass information about the pod or the environment to your application code.&lt;/p&gt;</description>
       
     </item>
     
@@ -124,7 +141,8 @@
       
       <guid>https://aghdam.nl/post/class-diagram-relations/</guid>
       
-        <description>Class diagram relations A brief introductions to different relationships between classes in Class Diagram.</description>
+        <description>&lt;h3 id=&#34;class-diagram-relations&#34;&gt;Class diagram relations&lt;/h3&gt;
+&lt;p&gt;A brief introductions to different relationships between classes in Class Diagram.&lt;/p&gt;</description>
       
     </item>
     

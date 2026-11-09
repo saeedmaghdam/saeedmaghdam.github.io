@@ -1,5 +1,5 @@
 baseURL = "https://aghdam.nl"
-languageCode = "en-US"
+locale = "en-US"
 DefaultContentLanguage = "en"
 title = "Website of Saeed Aghdam"
 publishDir = "docs"
